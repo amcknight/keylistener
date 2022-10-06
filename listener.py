@@ -3,11 +3,11 @@ import pygsheets
 
 
 class Listener():
-    attempt = 2
     client = pygsheets.authorize(service_account_file="service-account-credentials.json")
     sh = None
 
-    def __init__(self, title):
+    def __init__(self, title, attempt):
+        self.attempt = attempt
         self.sh = self.client.open(title).sheet1
 
     def recordHits(self, hits):
@@ -16,7 +16,9 @@ class Listener():
         self.attempt+=1
 
 if __name__ == '__main__':
-    l = Listener('Hits on Bowser')
+    docName = 'Progress Bars'
+    startingCell = 3
+    l = Listener(docName, startingCell)
 
     keyboard.add_hotkey('ctrl+0', lambda: l.recordHits(0))
     keyboard.add_hotkey('ctrl+1', lambda: l.recordHits(1))
