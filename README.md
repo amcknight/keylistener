@@ -22,7 +22,13 @@ sudo is required for the `keyboard` library for some reason.
 
 ## Roadmap
 ### v1
-- Use argsparse to ask about number of phases and maybe to get the keymapping
+- Use argsparse to ask for:
+  - number of phases
+  - keymapping file
+  - google sheet name
+  - initial attempt #
+  - cell of the first attempt
+  - maybe to input the keymapping itself
 - Allow for the keymapping to be specified from a file
 - Generate the Sheet from the CLI
 - Link to or create better google cloud service account instructions

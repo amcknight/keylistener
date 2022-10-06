@@ -29,4 +29,8 @@ if __name__ == '__main__':
     keyboard.add_hotkey('ctrl+6', lambda: l.recordHits(6))
     keyboard.add_hotkey('ctrl+7', lambda: l.recordHits(7))
 
-    keyboard.wait()
+    print("Ready for inputs")
+    try:
+        keyboard.wait()
+    except:
+        print("Exiting on row: "+str(l.attempt))
