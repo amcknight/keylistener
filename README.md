@@ -9,3 +9,13 @@ Aggregations and graphs need to be built manually in your sheet. An example goog
 You'll also need to give your service account Editor access to your google sheet by sharing it with them. I got an email for this that looked like `BLAH-service-account@BLAH-NUMBER.iam.gserviceaccount.com`. Sorry, I don't remember exactly how I set this up either.
 
 Good luck! :/
+
+## Roadmap
+### v1
+- Use argsparse to ask about number of phases and maybe to get the keymapping
+- Allow for the keymapping to be specified from a file
+- Generate the Sheet from the CLI
+- Link to or create better google cloud service account instructions
+
+### Beyond
+- Re-do the whole thing as a cool website instead of a janky google sheet
