@@ -17,8 +17,8 @@ class Listener():
 
 if __name__ == '__main__':
     docName = 'Progress Bars'
-    startingCell = 3
-    l = Listener(docName, startingCell)
+    startingRow = 3
+    l = Listener(docName, startingRow)
 
     keyboard.add_hotkey('ctrl+0', lambda: l.recordHits(0))
     keyboard.add_hotkey('ctrl+1', lambda: l.recordHits(1))
